@@ -19,3 +19,19 @@ bytecode {
 };
 ``` 
 Result == 3
+
+
+example:
+
+make
+
+./vm
+
+expected output: ```
+mov reg const
+mov reg const
+add reg reg
+mov reg reg
+sub reg const
+3
+```
