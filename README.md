@@ -27,7 +27,8 @@ make
 
 ./vm
 
-expected output: ```
+expected output: 
+```
 mov reg const
 mov reg const
 add reg reg
