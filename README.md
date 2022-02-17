@@ -9,16 +9,18 @@ And 6 instructions: add registers, subtract registers, move registers, add const
 Sample 
 ```
 bytecode {
-
-    kMovConst,  kR0,    02,
-    kMovConst,  kR1,    04,
-    kAddReg,    kR0,    kR1,
-    kMovReg,    kRax,   kR0,
-    kSubConst,  kRax,   03,
+    kMovConst,  kR0,    10,
+    kAddConst,  kR0,    5,
+    kMovConst,  kRax,   3,
+    kSubReg,    kR0,    kRax,
+    kMovConst,  kRax,   4,
+    kAddReg,    kR0,    kRax,
+    kMovReg,    kRax,  kR0,
+    kSubConst,  kRax,   7,
     kHalt
 };
 ``` 
-Result == 3
+Result == 9
 
 
 example:
