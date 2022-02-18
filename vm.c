@@ -1,11 +1,4 @@
-//
-//  vm.c
-//  vm
-//
-//  Created by Irelia on 2/17/22.
-//
-
-#include <vm.h>
+#include "vm.h"
 
 struct vm_context* initvm(void){
     struct vm_context* ctx = malloc(sizeof(struct vm_context));
@@ -29,8 +22,11 @@ int64_t* vm_getregister(struct vm_context* ctx, uint8_t op){
         case kRax:
             reg = &ctx->registers.rax;
             break;
-        case kRdx:
-            reg = &ctx->registers.rdx;
+        case kR2:
+            reg = &ctx->registers.r2;
+        case kR3:
+            reg = &ctx->registers.r3;
+            break;
         default:
             break;
     }
