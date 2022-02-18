@@ -1,19 +1,17 @@
-//
-//  main.c
-//  vm
-//
-//  Created by Irelia on 2/17/22.
-//
-
-#include <vm.h>
+#include "vm.h"
 
 
 uint8_t addtwodigits[] = {
-    kMovConst,  kR0,    02,
-    kMovConst,  kR1,    04,
+
+    kMovConst,  kR0,    10,
+    kAddConst,  kR0,    5,
+    kMovConst,  kR1,    3,
+    kSubReg,    kR0,    kR1,
+    kMovConst,  kR1,    4,
     kAddReg,    kR0,    kR1,
-    kMovReg,    kRax,   kR0,
-    kSubConst,  kRax,   03,
+    kMovReg,    kR1,    kR0,
+    kSubConst,  kR1,    7,
+    kMovReg,    kRax,   kR1,
     kHalt
 };
 int main(int argc, const char * argv[]) {
