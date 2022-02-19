@@ -4,4 +4,4 @@ CFLAGS = -I./include
 
 .PHONY : All
 All : $(OBJFILES)
-	$(CC) $(CXXFLAGS) $(OBJFILES) -o $(TARGET)
+	$(CC) $(CFLAGS) $(OBJFILES) -o $(TARGET)
